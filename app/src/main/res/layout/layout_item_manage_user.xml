@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/colorPrimaryDark"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_item_manage_user_id"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="id"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"/>
+        <View
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#c0c0c0"/>
+        <TextView
+            android:id="@+id/tv_item_manage_user_name"
+            android:layout_width="0dp"
+            android:layout_weight="1.5  "
+            android:layout_height="wrap_content"
+            android:text="Joseph Eduard Moje"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"/>
+        <View
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#c0c0c0"/>
+        <TextView
+            android:id="@+id/tv_item_manage_user_email"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"/>
+        <View
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#c0c0c0"/>
+        <TextView
+            android:id="@+id/tv_item_manage_user_type"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"/>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
