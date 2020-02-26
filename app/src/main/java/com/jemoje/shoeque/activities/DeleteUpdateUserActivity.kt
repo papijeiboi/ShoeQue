@@ -1,5 +1,6 @@
 package com.jemoje.shoeque.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_delete_update_user.*
 class DeleteUpdateUserActivity : AppCompatActivity() {
     private var userType: String = ""
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE

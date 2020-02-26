@@ -20,6 +20,9 @@ class ShoesData {
     @SerializedName("description")
     var description: String? = null
 
+    @SerializedName("price")
+    var price: String? = null
+
     @SerializedName("deleted_at")
     var deletedAt: String? = null
 

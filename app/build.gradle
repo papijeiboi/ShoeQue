@@ -61,4 +61,9 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
 }

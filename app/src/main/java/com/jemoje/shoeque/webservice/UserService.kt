@@ -14,7 +14,7 @@ interface UserService {
     fun login(
         @Field("email") username: String,
         @Field("password") password: String
-    ):retrofit2.Call<UserResponse>
+    ): retrofit2.Call<UserResponse>
 
     @GET("/api/shoes/accounts")
     fun getUsers(
@@ -55,7 +55,7 @@ interface UserService {
         @Path("id") id: String,
         @Header("Accept") accept: String,
         @Header("Authorization") authHeader: String
-    ):retrofit2.Call<UserData>
+    ): retrofit2.Call<UserData>
 
     @FormUrlEncoded
     @POST("/api/shoes/accounts/{id}")
@@ -68,20 +68,61 @@ interface UserService {
         @Path("id") id: String,
         @Header("Accept") accept: String,
         @Header("Authorization") authHeader: String
-    ):retrofit2.Call<UserData>
+    ): retrofit2.Call<UserData>
 
     @DELETE("/api/shoes/accounts/{id}")
     fun deleteUser(
         @Path("id") id: String,
         @Header("Accept") accept: String,
         @Header("Authorization") authHeader: String
-    ):retrofit2.Call<DeleteResponse>
+    ): retrofit2.Call<DeleteResponse>
 
     @GET("/api/shoes/products")
     fun displayShoes(
         @Header("Accept") accept: String,
         @Header("Authorization") authHeader: String
-    ):retrofit2.Call<DisplayShoesResponse>
+    ): retrofit2.Call<DisplayShoesResponse>
+
+    @GET("/api/shoes/products")
+    fun scanQr(
+        @Query("qr_code") qrCode: String,
+        @Header("Accept") accept: String,
+        @Header("Authorization") authHeader: String
+    ): retrofit2.Call<ShoesData>
+
+    @GET("/api/shoes/products")
+    fun recommendation(
+        @Query("search") search: String,
+        @Header("Accept") accept: String,
+        @Header("Authorization") authHeader: String
+    ): retrofit2.Call<DisplayShoesResponse>
+
+    @FormUrlEncoded
+    @POST("/api/shoes/orders")
+    fun createOrderId(
+        @Field("sale_id") saleId: String,
+        @Field("stock_id") stockId: String,
+        @Header("Accept") accept: String,
+        @Header("Authorization") authHeader: String
+    ): retrofit2.Call<OrderIdResponse>
+
+    @FormUrlEncoded
+    @POST("/api/shoes/ordered-products")
+    fun orderProduct(
+        @Field("order_id") orderId: String,
+        @Field("product_id") productId: String,
+        @Field("size_id") sizeId: String,
+        @Header("Accept") accept: String,
+        @Header("Authorization") authHeader: String
+    ): retrofit2.Call<OrderProductResponse>
+
+    @GET("/api/shoes/ordered-products")
+    fun displayOrders(
+        @Query("sort_by") sortBy: String,
+        @Query("sort_order") sortOrder: String,
+        @Header("Accept") accept: String,
+        @Header("Authorization") authHeader: String
+    ): retrofit2.Call<DisplayOrdersResponse>
 
 
     companion object Factory {

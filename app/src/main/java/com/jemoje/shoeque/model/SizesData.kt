@@ -25,4 +25,6 @@ class SizesData {
     @SerializedName("updatedAt")
     var updatedAt: String? = null
 
+    var isSelected: Boolean = false
+
 }

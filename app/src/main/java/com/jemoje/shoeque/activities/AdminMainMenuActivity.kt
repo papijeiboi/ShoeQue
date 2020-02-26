@@ -7,6 +7,7 @@ import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
@@ -15,6 +16,7 @@ import com.jemoje.shoeque.constant.Keys
 import com.jemoje.shoeque.model.UserData
 import com.pixplicity.easyprefs.library.Prefs
 import kotlinx.android.synthetic.main.activity_admin_main_menu.*
+import kotlinx.android.synthetic.main.activity_update_user.*
 import kotlinx.android.synthetic.main.layout_drawer_admin.*
 
 class AdminMainMenuActivity : AppCompatActivity() {
@@ -100,12 +102,33 @@ class AdminMainMenuActivity : AppCompatActivity() {
                         overridePendingTransition(R.anim.enter_from, R.anim.enter_to)
                     }
                 }
+                btn_admin_logout -> {
+                    val builder = AlertDialog.Builder(this)
+                    builder.setMessage("Are you sure you want to delete?")
+
+                    builder.setPositiveButton("YES") { dialog, which ->
+                        Prefs.clear()
+                        finish()
+                        val intent = Intent(this, LandingMenuActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                        startActivity(intent)
+                        overridePendingTransition(R.anim.enter_from, R.anim.enter_to)
+                        dialog.dismiss()
+                    }
+
+                    builder.setNegativeButton("No") { dialog, which ->
+                        dialog.dismiss()
+                    }
+                    val dialog: AlertDialog = builder.create()
+                    dialog.show()
+                }
             }
         }
         btn_admin_manage_stock.setOnClickListener(adminHandleClicks)
         btn_admin_manage_sales_user.setOnClickListener(adminHandleClicks)
         btn_admin_manage_stock_user.setOnClickListener(adminHandleClicks)
         btn_admin_manage_admin_user.setOnClickListener(adminHandleClicks)
+        btn_admin_logout.setOnClickListener(adminHandleClicks)
 
 
 
