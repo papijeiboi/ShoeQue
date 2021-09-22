@@ -27,15 +27,15 @@ android {
             dimension = 'app'
         }
         staging {
-            resValue "string", "base_url", "http://laundryshopprod-env.f2vgbaur27.ap-southeast-1.elasticbeanstalk.com/"
+            resValue "string", "base_url", "http://laundryapp-env.eba-bgmft4wn.ap-southeast-1.elasticbeanstalk.com/"
             dimension = 'environment'
         }
         production {
-            resValue "string", "base_url", "http://laundryshopprod-env.f2vgbaur27.ap-southeast-1.elasticbeanstalk.com/"
+            resValue "string", "base_url", "http://laundryapp-env.eba-bgmft4wn.ap-southeast-1.elasticbeanstalk.com/"
             dimension = 'environment'
         }
         development {
-            resValue "string", "base_url", "http://laundryshopprod-env.f2vgbaur27.ap-southeast-1.elasticbeanstalk.com/"
+            resValue "string", "base_url", "http://laundryapp-env.eba-bgmft4wn.ap-southeast-1.elasticbeanstalk.com/"
             dimension = 'environment'
         }
     }

@@ -15,8 +15,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.StockOrderActivity"
-            android:screenOrientation="fullSensor"></activity>
+
+        <activity
+            android:name=".activities.StockOrderActivity"
+            android:screenOrientation="fullSensor"/>
         <activity android:name=".activities.SuccessOrderActivity" />
         <activity android:name=".activities.ReviewOrderActivity" />
         <activity android:name=".activities.RecommendationActivity" />
@@ -24,7 +26,8 @@
         <activity android:name=".activities.ScanActivity" />
         <activity
             android:name=".activities.AddShoesActivity"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor" >
+        </activity>
         <activity
             android:name=".activities.ManageStockActivity"
             android:screenOrientation="fullSensor" />
@@ -42,18 +45,23 @@
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".activities.AddUserActivity"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor">
+        </activity>
         <activity
             android:name=".activities.ManageUserActivity"
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".activities.AdminMainMenuActivity"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor" >
+
+        </activity>
         <activity
             android:name=".activities.StockMainMenuActivity"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="fullSensor" >
+        </activity>
         <activity android:name=".activities.LandingMenuActivity" />
-        <activity android:name=".activities.MainMenuActivity" />
+        <activity android:name=".activities.MainMenuActivity" >
+        </activity>
         <activity
             android:name=".activities.SplashScreenActivity"
             android:theme="@style/Splash">
